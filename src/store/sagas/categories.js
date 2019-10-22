@@ -6,7 +6,7 @@ import { Creators as CategoriesActions } from '../ducks/categories';
 
 export function* categories() {
   try {
-    const { data } = yield call(api.get, 'jokes/categories');
+    const { data } = yield call(api.get, 'jokenkjs/categories');
 
     yield put(CategoriesActions.categoriesSuccess(data));
   } catch (err) {

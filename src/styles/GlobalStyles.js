@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'typeface-nunito';
+import 'font-awesome/css/font-awesome.css';
 
 const GlobalStyles = createGlobalStyle`
   * {

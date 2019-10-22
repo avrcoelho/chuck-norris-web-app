@@ -21,6 +21,7 @@ export default function categories(state = INITIAL_STATE, action) {
     case Types.SUCCESS:
       return {
         ...state,
+        data: action.payload.data,
         loading: false,
         error: null,
       };
@@ -39,8 +40,11 @@ export const Creators = {
   categoriesRequest: () => ({
     type: Types.REQUEST,
   }),
-  categoriesSuccess: () => ({
+  categoriesSuccess: (data) => ({
     type: Types.SUCCESS,
+    payload: {
+      data,
+    },
   }),
   categoriesFailure: (error) => ({
     type: Types.FAILURE,
