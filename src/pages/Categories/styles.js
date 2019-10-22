@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as RouteLink } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
@@ -35,4 +36,14 @@ export const ListCategories = styled.ul`
     }
 
   }
+`;
+
+export const Link = styled(RouteLink)`
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
 `;

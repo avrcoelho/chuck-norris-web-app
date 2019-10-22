@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import { Creators as CategoriesActions } from '../../store/ducks/categories';
 
-import { Container, Title, ListCategories } from './styles';
+import {
+  Container, Title, ListCategories, Link,
+} from './styles';
 
 import ErrorInfo from '../../components/ErrorInfo';
 
-function Categories({ history }) {
+export default function Categories() {
   const dispatch = useDispatch();
   const { data: categories, error, loading } = useSelector((state) => state.categories);
 
@@ -16,30 +17,20 @@ function Categories({ history }) {
     dispatch(CategoriesActions.categoriesRequest());
   }, [dispatch]);
 
-  function openCategory(category) {
-    history.push(`/${category}`);
-  }
-
   return (
     <>
       {error && <ErrorInfo error={error} />}
       <Container error={!!error}>
         <Title>Categorias</Title>
-        {loading && <i className="fa fa-spinner fa-pulse" />}
+        {!categories.length && loading && <i className="fa fa-spinner fa-pulse" />}
         <ListCategories>
           {categories.map((category) => (
-            <li key={category} onClick={() => openCategory(category)}>{category}</li>
+            <li key={category}>
+              <Link to={`/${category}`}>{category}</Link>
+            </li>
           ))}
         </ListCategories>
       </Container>
     </>
   );
 }
-
-Categories.propTypes = {
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
-};
-
-export default Categories;
