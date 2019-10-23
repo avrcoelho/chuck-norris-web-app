@@ -26,6 +26,7 @@ export const Container = styled.div`
     margin-top: 30px;
     cursor: pointer;
     max-width: 300px;
+    background-color: #fff;
   }
 `;
 

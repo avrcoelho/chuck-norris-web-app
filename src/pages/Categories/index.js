@@ -14,6 +14,8 @@ export default function Categories() {
   const { data: categories, error, loading } = useSelector((state) => state.categories);
 
   useEffect(() => {
+    document.title = 'Chuck Norris | Categorias';
+
     dispatch(CategoriesActions.categoriesRequest());
   }, [dispatch]);
 

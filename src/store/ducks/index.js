@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
 import categories from './categories';
-import category from './category';
+import facts from './facts';
 
 export default combineReducers({
   categories,
-  category,
+  facts,
 });

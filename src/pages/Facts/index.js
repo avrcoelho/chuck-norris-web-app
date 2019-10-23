@@ -2,22 +2,24 @@ import React, { useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Creators as CategoryActions } from '../../store/ducks/category';
+import { Creators as FactsActions } from '../../store/ducks/facts';
 
 import { Container, Title } from './styles';
 
 import ErrorInfo from '../../components/ErrorInfo';
 
-function Category() {
+function Facts() {
   const { category } = useParams();
   const dispatch = useDispatch();
-  const { data, error, loading } = useSelector((state) => state.category);
+  const { data, error, loading } = useSelector((state) => state.facts);
 
   const getCategoryData = useCallback(() => {
-    dispatch(CategoryActions.categoryRequest(category));
+    dispatch(FactsActions.factsRequest(category));
   }, [category, dispatch]);
 
   useEffect(() => {
+    document.title = 'Chuck Norris | Fatos';
+
     getCategoryData();
   }, [category, dispatch, getCategoryData]);
 
@@ -41,4 +43,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default Facts;

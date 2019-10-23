@@ -1,7 +1,7 @@
 export const Types = {
-  REQUEST: 'CATEGORY_REQUEST',
-  SUCCESS: 'CATEGORY_SUCCESS',
-  FAILURE: 'CATEGORY_FAILURE',
+  REQUEST: 'FACTS_REQUEST',
+  SUCCESS: 'FACTS_SUCCESS',
+  FAILURE: 'FACTS_FAILURE',
 };
 
 const INITIAL_STATE = {
@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   loading: true,
 };
 
-export default function category(state = INITIAL_STATE, action) {
+export default function facts(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.REQUEST:
       return {
@@ -38,19 +38,19 @@ export default function category(state = INITIAL_STATE, action) {
 }
 
 export const Creators = {
-  categoryRequest: (categoryName) => ({
+  factsRequest: (category) => ({
     type: Types.REQUEST,
     payload: {
-      categoryName,
+      category,
     },
   }),
-  categorySuccess: (data) => ({
+  factsSuccess: (data) => ({
     type: Types.SUCCESS,
     payload: {
       data,
     },
   }),
-  categoryFailure: (error) => ({
+  factsFailure: (error) => ({
     type: Types.FAILURE,
     payload: {
       error,
