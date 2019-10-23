@@ -1,7 +1,7 @@
 # Chuck Norris - Web app
 
 Aplicação desenvolvida pensando na responsividade e com um design bem limpo, moderno e simples.
-Ela consome a API [ChuckNorris.io](https://api.chucknorris.io/), na qual lista as categorias fornecidas e através de uma categoria é fornecida um fatos do Chuck Norris.
+Ela consome a API [ChuckNorris.io](https://api.chucknorris.io/), na qual lista as categorias fornecidas e através de uma categoria é fornecido um fatos do Chuck Norris.
 
 ## Instalar dependencias
 
