@@ -1,12 +1,17 @@
 
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-import { Container } from './styles';
+import { Container, Link } from './styles';
 
-export default function Header() {
+function Header() {
   return (
     <Container>
-      <h1>Chuck Norris</h1>
+      <Link to="/">
+        Chuck Norris
+      </Link>
     </Container>
   );
 }
+
+export default withRouter(Header);

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as RouteLink } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
@@ -12,8 +13,16 @@ export const Container = styled.div`
   color: #fff;
   font-family: 'nunito';
   position: fixed;
+`;
 
-  h1 {
-    font-size: 22px;
-  }
+export const Link = styled(RouteLink)`
+  text-decoration: none;
+  height: 100%;
+  width: auto;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
 `;

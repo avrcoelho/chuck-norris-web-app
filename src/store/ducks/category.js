@@ -1,16 +1,16 @@
 export const Types = {
-  REQUEST: 'CATEGORIES_REQUEST',
-  SUCCESS: 'CATEGORIES_SUCCESS',
-  FAILURE: 'CATEGORIES_FAILURE',
+  REQUEST: 'CATEGORY_REQUEST',
+  SUCCESS: 'CATEGORY_SUCCESS',
+  FAILURE: 'CATEGORY_FAILURE',
 };
 
 const INITIAL_STATE = {
-  data: [],
+  data: null,
   error: null,
   loading: true,
 };
 
-export default function categories(state = INITIAL_STATE, action) {
+export default function category(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.REQUEST:
       return {
@@ -30,6 +30,7 @@ export default function categories(state = INITIAL_STATE, action) {
         ...state,
         error: action.payload.error,
         loading: false,
+        data: null,
       };
     default:
       return state;
@@ -37,16 +38,19 @@ export default function categories(state = INITIAL_STATE, action) {
 }
 
 export const Creators = {
-  categoriesRequest: () => ({
+  categoryRequest: (categoryName) => ({
     type: Types.REQUEST,
+    payload: {
+      categoryName,
+    },
   }),
-  categoriesSuccess: (data) => ({
+  categorySuccess: (data) => ({
     type: Types.SUCCESS,
     payload: {
       data,
     },
   }),
-  categoriesFailure: (error) => ({
+  categoryFailure: (error) => ({
     type: Types.FAILURE,
     payload: {
       error,
