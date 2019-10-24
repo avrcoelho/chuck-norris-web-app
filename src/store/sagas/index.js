@@ -10,5 +10,6 @@ export default function* rootSaga() {
   return yield all([
     takeLatest(CategoriesTypes.REQUEST, categories),
     takeLatest(FactsTypes.REQUEST, facts),
+    takeLatest(FactsTypes.UPDATE, facts),
   ]);
 }

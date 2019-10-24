@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -11,30 +11,32 @@ import ErrorInfo from '../../components/ErrorInfo';
 function Facts() {
   const { category } = useParams();
   const dispatch = useDispatch();
-  const { data, error, loading } = useSelector((state) => state.facts);
-
-  const getCategoryData = useCallback(() => {
-    dispatch(FactsActions.factsRequest(category));
-  }, [category, dispatch]);
+  const {
+    data, error, loading, updating,
+  } = useSelector((state) => state.facts);
 
   useEffect(() => {
     document.title = 'Facts | Fatos';
 
-    getCategoryData();
-  }, [category, dispatch, getCategoryData]);
+    dispatch(FactsActions.factsRequest(category));
+  }, [category, dispatch]);
+
+  function updateFact() {
+    dispatch(FactsActions.factsUpdate(category));
+  }
 
   return (
     <>
       {error && <ErrorInfo error={error} />}
       <Container>
         <Title error={!!error}>{category}</Title>
-        {(loading && !data) && <i className="fa fa-spinner fa-pulse" />}
-        {((!loading && !error) || data) && (
+        {loading && <i className="fa fa-spinner fa-pulse" />}
+        {(!loading && !error) && (
           <>
             <img src={data.icon_url} alt="Avatar" />
             <p>{data.value}</p>
-            <button type="button" onClick={getCategoryData}>
-              {loading ? <i className="fa fa-spinner fa-pulse" /> : 'Atualizar' }
+            <button type="button" onClick={updateFact}>
+              {updating ? <i className="fa fa-spinner fa-pulse" /> : 'Atualizar' }
             </button>
           </>
         )}
