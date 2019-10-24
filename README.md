@@ -13,6 +13,11 @@ Web app desenvolvido para listar fatos relacionados ao Chuck Norris.
 - [Redux Ducks Pattern](https://github.com/erikras/ducks-modular-redux)
 - [React-Router-DOM](https://www.npmjs.com/package/react-router-dom)
 - [axios](https://github.com/axios/axios)
+- [styled-components](https://www.styled-components.com/)
+- [Font Awesome](http://fontawesome.com/)
+- [prop-types](https://www.npmjs.com/package/prop-types)
+- [redux-saga](https://github.com/redux-saga/redux-saga)
+- [typeface-nunito](https://www.npmjs.com/package/typeface-nunito)
 - [ChuckNorris.io](https://api.chucknorris.io/)
 
 ## Instalação
