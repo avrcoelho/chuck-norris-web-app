@@ -22,8 +22,8 @@ export default function Categories() {
   return (
     <>
       {error && <ErrorInfo error={error} />}
-      <Container error={!!error}>
-        <Title>Categorias</Title>
+      <Container>
+        <Title error={!!error}>Categorias</Title>
         {!categories.length && loading && <i className="fa fa-spinner fa-pulse" />}
         <ListCategories>
           {categories.map((category) => (

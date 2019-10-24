@@ -4,7 +4,7 @@ import { Link as RouteLink } from 'react-router-dom';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: ${(props) => (props.error ? 0 : '80px')} 10px 0 10px;
+  padding: 0 10px;
   text-align: center;
 `;
 
@@ -12,7 +12,7 @@ export const Title = styled.h2`
   width: 100%;
   color: #250048;
   text-align: center;
-  margin: 15px 0;
+  margin:  ${(props) => (props.error ? 0 : '80px')} 0 15px 0;
   font-size: 18px;
   text-transform: uppercase;
 `;

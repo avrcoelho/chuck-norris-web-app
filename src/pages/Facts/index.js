@@ -26,8 +26,8 @@ function Facts() {
   return (
     <>
       {error && <ErrorInfo error={error} />}
-      <Container error={error}>
-        <Title>{category}</Title>
+      <Container>
+        <Title error={!!error}>{category}</Title>
         {(loading && !data) && <i className="fa fa-spinner fa-pulse" />}
         {((!loading && !error) || data) && (
           <>
