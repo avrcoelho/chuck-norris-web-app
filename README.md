@@ -2,7 +2,7 @@
 
 Aplicação desenvolvida para listar fatos relacionados ao Chuck Norris.
 
-## Desanvolvido com:
+## Desanvolvido com
 
 - [React.js](https://reactjs.org/)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
@@ -15,7 +15,7 @@ Aplicação desenvolvida para listar fatos relacionados ao Chuck Norris.
 - [axios](https://github.com/axios/axios)
 - [ChuckNorris.io](https://api.chucknorris.io/)
 
-## Intalação
+## Instalação
 
 1. Clone este repositórios em sua maquina
 
