@@ -50,7 +50,7 @@ npm run start
 
 ## Demonstração
 
-[Chuck Norris Facts]()
+[Chuck Norris Facts](https://chuck-norris-facts-web-app.herokuapp.com/animal)
 
 ## Licença
 
