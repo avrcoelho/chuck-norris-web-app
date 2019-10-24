@@ -1,6 +1,6 @@
-# Chuck Norris - Web App
+# Chuck Norris Facts
 
-Aplicação desenvolvida para listar fatos relacionados ao Chuck Norris.
+Web app desenvolvido para listar fatos relacionados ao Chuck Norris.
 
 ## Desanvolvido com
 
