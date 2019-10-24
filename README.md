@@ -2,7 +2,7 @@
 
 Web app desenvolvido para listar fatos relacionados ao Chuck Norris.
 
-## Desanvolvido com
+## Desenvolvido com
 
 - [React.js](https://reactjs.org/)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
@@ -16,7 +16,7 @@ Web app desenvolvido para listar fatos relacionados ao Chuck Norris.
 - [styled-components](https://www.styled-components.com/)
 - [Font Awesome](http://fontawesome.com/)
 - [prop-types](https://www.npmjs.com/package/prop-types)
-- [redux-saga](https://github.com/redux-saga/redux-saga)
+- [Redux-Saga](https://github.com/redux-saga/redux-saga)
 - [typeface-nunito](https://www.npmjs.com/package/typeface-nunito)
 - [ChuckNorris.io](https://api.chucknorris.io/)
 
