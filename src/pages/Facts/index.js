@@ -18,7 +18,7 @@ function Facts() {
   }, [category, dispatch]);
 
   useEffect(() => {
-    document.title = 'Chuck Norris | Fatos';
+    document.title = 'Facts | Fatos';
 
     getCategoryData();
   }, [category, dispatch, getCategoryData]);

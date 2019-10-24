@@ -4,7 +4,7 @@ import { Container } from './styles';
 
 export default function NotFound() {
   useEffect(() => {
-    document.title = 'Chuck Norris | Erro';
+    document.title = 'Facts | Erro';
   }, []);
 
   return (

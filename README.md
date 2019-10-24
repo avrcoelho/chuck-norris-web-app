@@ -1,17 +1,52 @@
 # Chuck Norris - Web App
 
-Aplicação desenvolvida pensando na responsividade e com um design bem limpo, moderno e simples.
-Ela consome a API [ChuckNorris.io](https://api.chucknorris.io/), na qual lista as categorias fornecidas e através de uma categoria é fornecido um fatos do Chuck Norris.
+Aplicação desenvolvida para listar fatos relacionados ao Chuck Norris.
 
-## Instalar dependencias
+## Desanvolvido com:
+
+- [React.js](https://reactjs.org/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Create React App](https://create-react-app.dev/)
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://github.com/reduxjs/react-redux)
+- [Redux-Saga](https://github.com/redux-saga/redux-saga)
+- [Redux Ducks Pattern](https://github.com/erikras/ducks-modular-redux)
+- [React-Router-DOM](https://www.npmjs.com/package/react-router-dom)
+- [axios](https://github.com/axios/axios)
+- [ChuckNorris.io](https://api.chucknorris.io/)
+
+## Intalação
+
+1. Clone este repositórios em sua maquina
+
+2. Instale as dependencias usando:
 
 ```
-npm install ou yarn install
+yarn install
+```
+
+ou
+
+```
+npm install
 ```
 
 ## Executar
 
 ```
-npm run start ou yarn start
+yarn start
 ```
 
+ou
+
+```
+npm run start
+```
+
+## Demonstração
+
+[Chuck Norris Facts]()
+
+## Licença
+
+[MIT](https://opensource.org/licenses/MIT)

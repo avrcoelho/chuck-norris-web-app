@@ -14,7 +14,7 @@ export default function Categories() {
   const { data: categories, error, loading } = useSelector((state) => state.categories);
 
   useEffect(() => {
-    document.title = 'Chuck Norris | Categorias';
+    document.title = 'Facts | Categorias';
 
     dispatch(CategoriesActions.categoriesRequest());
   }, [dispatch]);
@@ -28,7 +28,10 @@ export default function Categories() {
         <ListCategories>
           {categories.map((category) => (
             <li key={category}>
-              <Link to={`/${category}`}>{category}</Link>
+              <Link to={`/${category}`}>
+                <span>{category}</span>
+                <i className="fa fa-angle-right" />
+              </Link>
             </li>
           ))}
         </ListCategories>

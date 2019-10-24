@@ -4,8 +4,7 @@ import { Link as RouteLink } from 'react-router-dom';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 10px;
-  margin-top: ${(props) => (props.error ? 0 : '80px')};
+  padding: ${(props) => (props.error ? 0 : '80px')} 10px 0 10px;
   text-align: center;
 `;
 
@@ -43,7 +42,12 @@ export const Link = styled(RouteLink)`
   color: #000;
   display: flex;
   flex: 1;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
+
+  .fa-angle-right {
+    color: #999;
+  }
 `;

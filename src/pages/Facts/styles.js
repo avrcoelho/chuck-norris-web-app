@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 10px;
-  margin-top: ${(props) => (props.error ? 0 : '80px')};
+  padding: ${(props) => (props.error ? 0 : '80px')} 10px 0 10px;
   text-align: center;
 
   img {

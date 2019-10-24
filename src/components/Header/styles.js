@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 5px;
   color: #fff;
   font-family: 'nunito';
   position: fixed;
@@ -21,8 +21,13 @@ export const Link = styled(RouteLink)`
   width: auto;
   color: #fff;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   font-size: 22px;
-  font-weight: bold;
+
+  img {
+    width: 55px;
+    filter: invert(100%);
+  }
 `;
